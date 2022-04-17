@@ -22,7 +22,7 @@ function User({account}) {
 
     fetchRentals();
 
-  }, [isVisible]);
+  }, [isVisible, Moralis.Object, Moralis.Query, account]);
 
 
   return (
@@ -50,6 +50,7 @@ function User({account}) {
                   <div>
                     <img
                       width="180px"
+                      alt="card"
                       src={e.attributes.imgUrl}
                     />
                   </div>

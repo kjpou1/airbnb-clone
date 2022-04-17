@@ -67,7 +67,7 @@ const Rentals = () => {
     }
 
     fetchRentalsList();
-  }, [searchFilters]);
+  }, [searchFilters, Moralis.Object, Moralis.Query, account]);
 
 
   const bookRental = async function (start, end, id, dayPrice) {
@@ -174,7 +174,7 @@ const Rentals = () => {
                 <>
                   <hr className="line2" />
                   <div className={highLight === i ? "rentalDivH " : "rentalDiv"}>
-                    <img className="rentalImg" alt="" src={e.attributes.imgUrl}></img>
+                    <img className="rentalImg" alt="rental" src={e.attributes.imgUrl}></img>
                     <div className="rentalInfo">
                       <div className="rentalTitle">{e.attributes.name}</div>
                       <div className="rentalDesc">
